@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let miNuevaImagenTemp = new Image();
         // Cuando la imagen se carge se procederá al recorte
         miNuevaImagenTemp.onload = function () {
+            contexto.filter = "contrast(500) blur(2.8px) saturate(500%) brightness(0.8)"
             // Se recorta
             contexto.drawImage(miNuevaImagenTemp, inicioX, inicioY, nuevoAncho * zoom, nuevaAltura * zoom, 0, 0, nuevoAncho, nuevaAltura);
             // Se transforma a base64
